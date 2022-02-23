@@ -1,0 +1,22 @@
+#gridcontainer {
+    display: grid;
+    max-width: 900px;
+    max-height: 900px;
+    min-width: 900px;
+    min-height: 900px;
+    border: solid red 50px;
+    background-color: lightgrey;
+}
+
+.parameters {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 15px;
+    align-items: center;
+}
+
+h1 {
+    color: red;
+    display: flex;
+    justify-content: center;
+}

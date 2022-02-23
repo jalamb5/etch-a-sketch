@@ -1,5 +1,6 @@
 body {
-    background-color: aliceblue;
+    background-color: #393E41;
+    color: white;
 }
 
 #gridflex {
@@ -13,6 +14,7 @@ body {
     max-height: 700px;
     min-width: 900px;
     min-height: 700px;
+    border-radius: 1em;
     border: solid rgb(255, 0, 0) 50px;
     background-color: lightgrey;
 }
@@ -22,6 +24,12 @@ body {
     gap: 10px;
     align-items: center;
     justify-content: center;
+}
+
+#clear, #eraser {
+    display: flex;
+    margin-left: 25px;
+    justify-self: right;
 }
 
 h1 {
@@ -39,7 +47,7 @@ button {
     font-family:sans-serif;
     font-weight:300;
     color:#FFFFFF;
-    background-color:#4eb5f1;
+    background-color:#80AB82;
     text-align:center;
     transition: all 0.2s;
 }

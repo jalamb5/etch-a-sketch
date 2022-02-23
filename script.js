@@ -42,7 +42,7 @@ ERASER.addEventListener('click', function() {
     activeButton(COLOR, ERASER);
 });
 
-// Initialize page
+// Initialize etch a sketch
 createGrid()
 
 function createGrid(num=16) {

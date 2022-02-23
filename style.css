@@ -48,6 +48,10 @@ button:hover{
 background-color:#4095c6;
 }
 
+.active {
+    background-color: #29678b;
+}
+
 .shake {
     animation: shake .8s ease-in;
 }

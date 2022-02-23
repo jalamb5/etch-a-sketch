@@ -7,16 +7,40 @@ const GREY = document.getElementById('grey');
 const RGB = document.getElementById('rgb');
 const BLACK = document.getElementById('black');
 const ERASER = document.getElementById('eraser');
+const SIZE = document.getElementsByClassName('size');
+const COLOR = document.getElementsByClassName('color');
 let gridItem = document.getElementsByClassName('griditem');
 
 CLEAR.addEventListener('click', () => clearGrid());
-SMALL.addEventListener('click', () => resetGrid(100));
-MEDIUM.addEventListener('click', () => resetGrid(50));
-LARGE.addEventListener('click', () => resetGrid(16));
-GREY.addEventListener('click', () => draw('rgb(128, 128, 128)'));
-BLACK.addEventListener('click', () => draw('rgb(0, 0, 0)'));
-RGB.addEventListener('click', () => draw(randColor(), true));
-ERASER.addEventListener('click', () => draw('rgb(211, 211, 211)'));
+
+SMALL.addEventListener('click', function() {
+    resetGrid(100);
+    activeButton(SIZE, SMALL);
+});
+MEDIUM.addEventListener('click', function() {
+    resetGrid(50);
+    activeButton(SIZE, MEDIUM);
+});
+LARGE.addEventListener('click', function() {
+    resetGrid(16);
+    activeButton(SIZE, LARGE);
+});
+GREY.addEventListener('click', function() {
+    draw('rgb(128, 128, 128)');
+    activeButton(COLOR, GREY);
+});
+BLACK.addEventListener('click', function() {
+    draw('rgb(0, 0, 0)');
+    activeButton(COLOR, BLACK);
+});
+RGB.addEventListener('click', function() {
+    draw(randColor(), true);
+    activeButton(COLOR, RGB);
+});
+ERASER.addEventListener('click', function() {
+    draw('rgb(211, 211, 211)');
+    activeButton(COLOR, ERASER);
+});
 
 createGrid()
 
@@ -70,5 +94,10 @@ function clearGrid() {
 
 function shakeIt() {
     GRIDCONT.classList.add("shake");
-    setTimeout(() => {GRIDCONT.classList.remove("shake");}, 1000);
+    setTimeout(() => {GRIDCONT.classList.remove("shake");}, 500);
+}
+
+function activeButton(type, button) {
+    Array.from(type).forEach(type => type.classList.remove('active'));
+    button.classList.add('active');
 }

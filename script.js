@@ -57,11 +57,18 @@ function randColor() {
 };
 
 function resetGrid(num) {
+    shakeIt();
     // Clear current image.
     Array.from(gridItem).forEach((item) => item.style.background = '');
     createGrid(num);
 }
 
 function clearGrid() {
+    shakeIt();
     Array.from(gridItem).forEach((item) => item.style.background = '');
+}
+
+function shakeIt() {
+    GRIDCONT.classList.add("shake");
+    setTimeout(() => {GRIDCONT.classList.remove("shake");}, 1000);
 }

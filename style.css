@@ -1,9 +1,18 @@
+body {
+    background-color: aliceblue;
+}
+
+#gridflex {
+    display: flex;
+    justify-content: center;
+}
+
 #gridcontainer {
     display: grid;
     max-width: 900px;
-    max-height: 900px;
+    max-height: 600px;
     min-width: 900px;
-    min-height: 900px;
+    min-height: 600px;
     border: solid red 50px;
     background-color: lightgrey;
 }
@@ -13,10 +22,11 @@
     gap: 10px;
     padding-bottom: 15px;
     align-items: center;
+    justify-content: center;
 }
 
 h1 {
-    color: red;
+    color: gold;
     display: flex;
     justify-content: center;
 }

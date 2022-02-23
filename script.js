@@ -42,6 +42,7 @@ ERASER.addEventListener('click', function() {
     activeButton(COLOR, ERASER);
 });
 
+// Initialize page
 createGrid()
 
 function createGrid(num=16) {
@@ -58,7 +59,7 @@ function createGrid(num=16) {
 }
 
 function draw(pencolor="rgb(128, 128, 128)", rand=false) {
-    if (rand === true) {
+    if (rand === true) { //only activated when rgb option is chosen
         Array.from(gridItem).forEach(function(event) {
             event.addEventListener("mouseenter", function() {
                 this.style.background = randColor();
@@ -84,7 +85,8 @@ function resetGrid(num) {
     shakeIt();
     // Clear current image.
     Array.from(gridItem).forEach((item) => item.style.background = '');
-    createGrid(num);
+    activeButton(COLOR, GREY);
+    createGrid(num);    
 }
 
 function clearGrid() {

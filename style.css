@@ -15,6 +15,7 @@ body {
     max-height: 700px;
     min-width: 900px;
     min-height: 700px;
+    padding-bottom: 25px;
     border-radius: 1em;
     border: solid rgb(255, 0, 0) 50px;
     background-color: lightgrey;
